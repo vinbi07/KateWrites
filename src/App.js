@@ -41,22 +41,22 @@ function App() {
     <div className="min-h-screen bg-warm-cream">
       {/* Sticky Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-md">
-        <div className="max-w-6xl mx-auto px-4 py-4">
+        <div className="max-w-6xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
           <div className="flex justify-between items-center">
             <motion.h1
-              className="text-2xl font-serif font-bold text-deep-brown"
+              className="text-xl sm:text-2xl font-serif font-bold text-deep-brown"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
               Kate
             </motion.h1>
-            <div className="flex gap-6">
+            <div className="flex gap-2 sm:gap-4 md:gap-6">
               {["About", "Examples", "Fandoms", "Pricing", "Contact"].map(
                 (item) => (
                   <button
                     key={item}
                     onClick={() => scrollToSection(item.toLowerCase())}
-                    className="text-deep-brown hover:text-sepia transition-colors font-medium"
+                    className="text-deep-brown hover:text-sepia transition-colors font-medium text-xs sm:text-sm md:text-base"
                   >
                     {item}
                   </button>
@@ -68,9 +68,9 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="py-20 px-4">
+      <section id="home" className="py-12 sm:py-16 md:py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
             <motion.div
               className="flex-1 text-center md:text-left"
               initial="hidden"
@@ -78,10 +78,10 @@ function App() {
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-deep-brown mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-deep-brown mb-4 sm:mb-6 leading-tight">
                 Hey, I'm Kate! ✨
               </h1>
-              <p className="text-xl md:text-2xl text-sepia mb-8">
+              <p className="text-lg sm:text-xl md:text-2xl text-sepia mb-6 sm:mb-8">
                 Crafting fanfiction with heart for over 14 years
               </p>
               <div className="w-32 h-1 bg-sepia mx-auto md:mx-0 rounded-full"></div>
@@ -93,7 +93,7 @@ function App() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-soft-beige">
+              <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-soft-beige">
                 <img
                   src={KatesProf}
                   alt="Kate's profile"
@@ -106,7 +106,7 @@ function App() {
       </section>
 
       {/* About Me Section */}
-      <section id="about" className="py-16 px-4 bg-stone-100 paper-texture">
+      <section id="about" className="py-12 sm:py-16 px-4 bg-stone-100 paper-texture">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial="hidden"
@@ -115,11 +115,11 @@ function App() {
             variants={fadeInUp}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-serif font-bold text-deep-brown mb-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-deep-brown mb-6 sm:mb-8 text-center">
               About Me
             </h2>
-            <div className="w-32 h-1 bg-sepia mx-auto rounded-full"></div>
-            <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+            <div className="w-32 h-1 bg-sepia mx-auto rounded-full mb-6 sm:mb-8"></div>
+            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-12">
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
                 I'm 26 and I write fanfiction! I've been in fandoms and writing
                 since I was twelve, starting with One Direction and The 100.
@@ -142,10 +142,10 @@ function App() {
       </section>
 
       {/* What I Write Section */}
-      <section id="what-i-write" className="py-16 px-4">
+      <section id="what-i-write" className="py-12 sm:py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.h2
-            className="text-4xl font-serif font-bold text-deep-brown mb-8 text-center"
+            className="text-3xl sm:text-4xl font-serif font-bold text-deep-brown mb-6 sm:mb-8 text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -153,10 +153,10 @@ function App() {
           >
             What I Write
           </motion.h2>
-          <div className="w-32 h-1 bg-sepia mx-auto rounded-full mb-12"></div>
+          <div className="w-32 h-1 bg-sepia mx-auto rounded-full mb-8 sm:mb-12"></div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -269,10 +269,10 @@ function App() {
       </section>
 
       {/* Portfolio Section */}
-      <section id="examples" className="py-16 px-4 bg-stone-100 paper-texture">
+      <section id="examples" className="py-12 sm:py-16 px-4 bg-stone-100 paper-texture">
         <div className="max-w-6xl mx-auto">
           <motion.h2
-            className="text-4xl font-serif font-bold text-deep-brown mb-8 text-center"
+            className="text-3xl sm:text-4xl font-serif font-bold text-deep-brown mb-6 sm:mb-8 text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -280,10 +280,10 @@ function App() {
           >
             Example Works
           </motion.h2>
-          <div className="w-32 h-1 bg-sepia mx-auto rounded-full mb-12"></div>
+          <div className="w-32 h-1 bg-sepia mx-auto rounded-full mb-8 sm:mb-12"></div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -446,7 +446,7 @@ function App() {
       </section>
 
       {/* Fandoms & Rules Section */}
-      <section id="fandoms" className="py-16 px-4">
+      <section id="fandoms" className="py-12 sm:py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial="hidden"
@@ -454,27 +454,27 @@ function App() {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-4xl font-serif font-bold text-deep-brown mb-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-deep-brown mb-6 sm:mb-8 text-center">
               Fandoms & Rules
             </h2>
-            <div className="w-32 h-1 bg-sepia mx-auto rounded-full mb-8"></div>
+            <div className="w-32 h-1 bg-sepia mx-auto rounded-full mb-6 sm:mb-8"></div>
 
             {/* Fandoms Grid */}
             <motion.div
-              className="mb-8"
+              className="mb-6 sm:mb-8"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={staggerContainer}
             >
-              <h3 className="text-2xl font-serif font-bold text-deep-brown mb-6 text-center">
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-deep-brown mb-4 sm:mb-6 text-center">
                 Fandoms I Write For
               </h3>
-              <h4 className="text-md text-gray-600 mb-4 text-center">
+              <h4 className="text-sm sm:text-md text-gray-600 mb-4 text-center px-2">
                 (Character x Reader or Character x OC only | I DO NOT WRITE
                 ABOUT MINORS)
               </h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {[
                   {
                     name: "Jujutsu Kaisen",
@@ -646,7 +646,7 @@ function App() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-16 px-4 bg-stone-100 paper-texture">
+      <section id="pricing" className="py-12 sm:py-16 px-4 bg-stone-100 paper-texture">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial="hidden"
@@ -654,12 +654,12 @@ function App() {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-4xl font-serif font-bold text-deep-brown mb-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-deep-brown mb-6 sm:mb-8 text-center">
               Commission Pricing
             </h2>
-            <div className="w-32 h-1 bg-sepia mx-auto rounded-full mb-12"></div>
+            <div className="w-32 h-1 bg-sepia mx-auto rounded-full mb-8 sm:mb-12"></div>
 
-            <div className="bg-gradient-to-br from-white to-soft-beige rounded-2xl shadow-2xl p-10 border-2 border-sepia">
+            <div className="bg-gradient-to-br from-white to-soft-beige rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border-2 border-sepia">
               <div className="text-center mb-8">
                 <div className="inline-block bg-sepia text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
                   ✨ COMMISSION OPEN ✨
@@ -723,7 +723,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 px-4">
+      <section id="contact" className="py-12 sm:py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial="hidden"
@@ -731,17 +731,17 @@ function App() {
             viewport={{ once: true }}
             variants={fadeInUp}
           >
-            <h2 className="text-4xl font-serif font-bold text-deep-brown mb-8">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-deep-brown mb-6 sm:mb-8">
               Let's Connect
             </h2>
-            <div className="w-32 h-1 bg-sepia mx-auto rounded-full mb-8"></div>
-            <p className="text-lg text-gray-700 mb-8">
+            <div className="w-32 h-1 bg-sepia mx-auto rounded-full mb-6 sm:mb-8"></div>
+            <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8 px-4">
               Ready to commission a story or just want to chat about fanfiction?
               Reach out through any of these platforms!
             </p>
 
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
                 <a
                   href="https://www.tiktok.com/@eth3lroy"
                   target="_blank"
@@ -792,13 +792,13 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-deep-brown text-white py-8 px-4">
+      <footer className="bg-deep-brown text-white py-6 sm:py-8 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-lg font-serif mb-4">Kate - Fanfiction Writer</p>
-          <p className="text-sm text-soft-beige mb-4">
+          <p className="text-base sm:text-lg font-serif mb-3 sm:mb-4">Kate - Fanfiction Writer</p>
+          <p className="text-xs sm:text-sm text-soft-beige mb-3 sm:mb-4">
             Crafting stories with heart since 2012
           </p>
-          <div className="flex justify-center gap-6 mb-4">
+          <div className="flex justify-center gap-4 sm:gap-6 mb-3 sm:mb-4">
             <a
               href="https://www.tiktok.com/@eth3lroy"
               target="_blank"
