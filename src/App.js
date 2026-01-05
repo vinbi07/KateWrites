@@ -106,7 +106,10 @@ function App() {
       </section>
 
       {/* About Me Section */}
-      <section id="about" className="py-12 sm:py-16 px-4 bg-stone-100 paper-texture">
+      <section
+        id="about"
+        className="py-12 sm:py-16 px-4 bg-stone-100 paper-texture"
+      >
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial="hidden"
@@ -269,7 +272,10 @@ function App() {
       </section>
 
       {/* Portfolio Section */}
-      <section id="examples" className="py-12 sm:py-16 px-4 bg-stone-100 paper-texture">
+      <section
+        id="examples"
+        className="py-12 sm:py-16 px-4 bg-stone-100 paper-texture"
+      >
         <div className="max-w-6xl mx-auto">
           <motion.h2
             className="text-3xl sm:text-4xl font-serif font-bold text-deep-brown mb-6 sm:mb-8 text-center"
@@ -646,7 +652,10 @@ function App() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-12 sm:py-16 px-4 bg-stone-100 paper-texture">
+      <section
+        id="pricing"
+        className="py-12 sm:py-16 px-4 bg-stone-100 paper-texture"
+      >
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial="hidden"
@@ -794,7 +803,9 @@ function App() {
       {/* Footer */}
       <footer className="bg-deep-brown text-white py-6 sm:py-8 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-base sm:text-lg font-serif mb-3 sm:mb-4">Kate - Fanfiction Writer</p>
+          <p className="text-base sm:text-lg font-serif mb-3 sm:mb-4">
+            Kate - Fanfiction Writer
+          </p>
           <p className="text-xs sm:text-sm text-soft-beige mb-3 sm:mb-4">
             Crafting stories with heart since 2012
           </p>
