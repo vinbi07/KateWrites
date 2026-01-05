@@ -10,18 +10,14 @@ import {
   Instagram,
   Music,
   MessageCircle,
-  Mail,
 } from "lucide-react";
 
 function App() {
-  const [activeSection, setActiveSection] = useState("home");
-
   // Scroll to section
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(id);
     }
   };
 
