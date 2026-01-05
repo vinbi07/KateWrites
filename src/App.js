@@ -159,113 +159,71 @@ function App() {
           <div className="w-32 h-1 bg-sepia mx-auto rounded-full mb-8 sm:mb-12"></div>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+            className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-3xl mx-auto"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
           >
-            {/* Fluff Card */}
+            {/* Fluff Tag */}
             <motion.div
               variants={fadeInUp}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+              className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-4 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow border-2 border-pink-200"
             >
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <Heart className="text-pink-500" size={24} />
-                  <h3 className="text-2xl font-serif font-bold text-deep-brown">
-                    Fluff
-                  </h3>
-                </div>
-                <p className="text-gray-600">
-                  Warm, cozy stories filled with comfort, sweetness, and
-                  heartwarming moments. Perfect for when you need a smile.
-                </p>
-              </div>
+              <Heart className="text-pink-500" size={20} />
+              <span className="text-lg sm:text-xl font-serif font-bold text-deep-brown">
+                Fluff
+              </span>
             </motion.div>
 
-            {/* Angst Card */}
+            {/* Angst Tag */}
             <motion.div
               variants={fadeInUp}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+              className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-4 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow border-2 border-blue-200"
             >
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <CloudRain className="text-blue-600" size={24} />
-                  <h3 className="text-2xl font-serif font-bold text-deep-brown">
-                    Angst
-                  </h3>
-                </div>
-                <p className="text-gray-600">
-                  Emotional depth, conflict, and heartache. Stories that explore
-                  the harder parts of love and life with authenticity.
-                </p>
-              </div>
+              <CloudRain className="text-blue-600" size={20} />
+              <span className="text-lg sm:text-xl font-serif font-bold text-deep-brown">
+                Angst
+              </span>
             </motion.div>
 
-            {/* Hurt/Comfort Card */}
+            {/* Hurt/Comfort Tag */}
             <motion.div
               variants={fadeInUp}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+              className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-4 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow border-2 border-purple-200"
             >
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <Sparkles className="text-purple-500" size={24} />
-                  <h3 className="text-2xl font-serif font-bold text-deep-brown">
-                    Hurt/Comfort
-                  </h3>
-                </div>
-                <p className="text-gray-600">
-                  The perfect balance of pain and healing. Stories where
-                  characters support each other through difficult times.
-                </p>
-              </div>
+              <Sparkles className="text-purple-500" size={20} />
+              <span className="text-lg sm:text-xl font-serif font-bold text-deep-brown">
+                Hurt/Comfort
+              </span>
             </motion.div>
 
-            {/* Smut Card */}
+            {/* Smut Tag */}
             <motion.div
               variants={fadeInUp}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+              className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-4 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow border-2 border-red-200"
             >
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <Heart className="text-red-500 fill-current" size={24} />
-                  <h3 className="text-2xl font-serif font-bold text-deep-brown">
-                    Smut
-                  </h3>
-                </div>
-                <p className="text-gray-600">
-                  Mature, intimate content written with care and respect. For
-                  readers 18+ seeking romantic and explicit narratives.
-                </p>
-                <span className="inline-block mt-2 px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-medium">
-                  18+ Only
-                </span>
-              </div>
+              <Heart className="text-red-500 fill-current" size={20} />
+              <span className="text-lg sm:text-xl font-serif font-bold text-deep-brown">
+                Smut
+              </span>
+              <span className="ml-1 px-2.5 py-0.5 bg-red-100 text-red-700 rounded-full text-xs font-medium">
+                18+
+              </span>
             </motion.div>
 
-            {/* Dead Dove Card */}
+            {/* Dead Dove Tag */}
             <motion.div
               variants={fadeInUp}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border-2 border-amber-500"
+              className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-4 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow border-2 border-amber-400"
             >
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <AlertTriangle className="text-amber-600" size={24} />
-                  <h3 className="text-2xl font-serif font-bold text-deep-brown">
-                    DD:DNE
-                  </h3>
-                </div>
-                <p className="text-gray-600 mb-3">
-                  Dead Dove: Do Not Eat. Dark, mature content with potentially
-                  triggering themes. Read tags carefully.
-                </p>
-                <div className="bg-amber-50 border-l-4 border-amber-500 p-3 rounded">
-                  <p className="text-sm text-amber-800 font-medium">
-                    ⚠️ Contains mature/dark themes. Proceed with caution.
-                  </p>
-                </div>
-              </div>
+              <AlertTriangle className="text-amber-600" size={20} />
+              <span className="text-lg sm:text-xl font-serif font-bold text-deep-brown">
+                DD:DNE
+              </span>
+              <span className="ml-1 px-2.5 py-0.5 bg-amber-100 text-amber-800 rounded-full text-xs font-medium">
+                ⚠️
+              </span>
             </motion.div>
           </motion.div>
         </div>
@@ -703,7 +661,7 @@ function App() {
                   <li className="flex items-start gap-3">
                     <span className="text-sepia">✓</span>
                     <span className="text-gray-700">
-                      Delivery within 1-2 weeks
+                      Delivery within 5-7 business days
                     </span>
                   </li>
                 </ul>
